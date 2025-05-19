@@ -1,0 +1,134 @@
+{
+  "Description": "What the script does: animone basic to understand how it work\nScript inputs: Create a point from the input point location\nScript outputs: Animone creation of loop of point ",
+  "output": {
+    "components": [
+      {
+        "id": 1,
+        "type": "Button",
+        "objectType": "Parameter",
+        "guid": "a8b97322-2d53-47cd-905e-b932c3ccd74e",
+        "params": {}
+      },
+      {
+        "id": 2,
+        "type": "Panel",
+        "objectType": "Parameter",
+        "guid": "59e0b89a-e487-49f8-bab8-b5bab16be14c",
+        "params": {
+          "Value": "0"
+        }
+      },
+      {
+        "id": 3,
+        "type": "Loop Start",
+        "objectType": "Component",
+        "guid": "2576f657-2f0d-4e3e-9dfb-c79eb4cd13d7",
+        "params": {}
+      },
+      {
+        "id": 4,
+        "type": "Panel",
+        "objectType": "Parameter",
+        "guid": "59e0b89a-e487-49f8-bab8-b5bab16be14c",
+        "params": {
+          "Value": "1"
+        }
+      },
+      {
+        "id": 5,
+        "type": "Addition",
+        "objectType": "Component",
+        "guid": "a0d62394-a118-422d-abb3-6af115c75b25",
+        "params": {}
+      },
+      {
+        "id": 6,
+        "type": "Loop End",
+        "objectType": "Component",
+        "guid": "15483310-2ce2-48c6-b803-9dee8cb7cc9b",
+        "params": {}
+      },
+      {
+        "id": 7,
+        "type": "Panel",
+        "objectType": "Parameter",
+        "guid": "59e0b89a-e487-49f8-bab8-b5bab16be14c",
+        "params": {
+          "Value": "Double click to edit panel content\u2026"
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": {
+          "id": 6,
+          "output": "Data"
+        },
+        "to": {
+          "id": 7,
+          "input": "Panel"
+        }
+      },
+      {
+        "from": {
+          "id": 3,
+          "output": "\u003E"
+        },
+        "to": {
+          "id": 6,
+          "input": "\u003C"
+        }
+      },
+      {
+        "from": {
+          "id": 3,
+          "output": "Data"
+        },
+        "to": {
+          "id": 5,
+          "input": "A"
+        }
+      },
+      {
+        "from": {
+          "id": 1,
+          "output": "Button"
+        },
+        "to": {
+          "id": 3,
+          "input": "Trigger"
+        }
+      },
+      {
+        "from": {
+          "id": 2,
+          "output": "Panel"
+        },
+        "to": {
+          "id": 3,
+          "input": "Data"
+        }
+      },
+      {
+        "from": {
+          "id": 5,
+          "output": "Result"
+        },
+        "to": {
+          "id": 6,
+          "input": "Data"
+        }
+      },
+      {
+        "from": {
+          "id": 4,
+          "output": "Panel"
+        },
+        "to": {
+          "id": 5,
+          "input": "B"
+        }
+      }
+    ]
+  }
+}

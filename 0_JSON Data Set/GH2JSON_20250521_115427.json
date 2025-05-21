@@ -1,0 +1,295 @@
+{
+  "Description": "What the script does: Create a tower for based on the polygon \nScript inputs: based on the one single point\nScript outputs: the geometry of tower",
+  "output": {
+    "components": [
+      {
+        "id": 1,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 51
+        }
+      },
+      {
+        "id": 2,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 3
+        }
+      },
+      {
+        "id": 3,
+        "type": "Construct Point",
+        "objectType": "Component",
+        "guid": "3581f42a-9592-4549-bd6b-1c0fc39d067b",
+        "params": {}
+      },
+      {
+        "id": 4,
+        "type": "Polygon",
+        "objectType": "Component",
+        "guid": "845527a6-5cea-4ae9-a667-96ae1667a4e8",
+        "params": {}
+      },
+      {
+        "id": 5,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 77
+        }
+      },
+      {
+        "id": 6,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 0
+        }
+      },
+      {
+        "id": 7,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 16
+        }
+      },
+      {
+        "id": 8,
+        "type": "Series",
+        "objectType": "Component",
+        "guid": "e64c5fb1-845c-4ab1-8911-5f338516ba67",
+        "params": {}
+      },
+      {
+        "id": 9,
+        "type": "Unit Z",
+        "objectType": "Component",
+        "guid": "9103c240-a6a9-4223-9b42-dbd19bf38e2b",
+        "params": {}
+      },
+      {
+        "id": 10,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 0
+        }
+      },
+      {
+        "id": 11,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 5
+        }
+      },
+      {
+        "id": 12,
+        "type": "Move",
+        "objectType": "Component",
+        "guid": "e9eb1dcf-92f6-4d4d-84ae-96222d60f56b",
+        "params": {}
+      },
+      {
+        "id": 13,
+        "type": "List Length",
+        "objectType": "Component",
+        "guid": "1817fd29-20ae-4503-b542-f0fb651e67d7",
+        "params": {}
+      },
+      {
+        "id": 14,
+        "type": "Series",
+        "objectType": "Component",
+        "guid": "e64c5fb1-845c-4ab1-8911-5f338516ba67",
+        "params": {}
+      },
+      {
+        "id": 15,
+        "type": "Rotate",
+        "objectType": "Component",
+        "guid": "b7798b74-037e-4f0c-8ac7-dc1043d093e0",
+        "params": {}
+      },
+      {
+        "id": 16,
+        "type": "Loft",
+        "objectType": "Component",
+        "guid": "a7a41d0a-2188-4f7a-82cc-1a2c4e4ec850",
+        "params": {}
+      }
+    ],
+    "connections": [
+      {
+        "from": {
+          "id": 3,
+          "output": "Point"
+        },
+        "to": {
+          "id": 4,
+          "input": "Plane"
+        }
+      },
+      {
+        "from": {
+          "id": 1,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 4,
+          "input": "Radius"
+        }
+      },
+      {
+        "from": {
+          "id": 8,
+          "output": "Series"
+        },
+        "to": {
+          "id": 9,
+          "input": "Factor"
+        }
+      },
+      {
+        "from": {
+          "id": 5,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 8,
+          "input": "Step"
+        }
+      },
+      {
+        "from": {
+          "id": 7,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 8,
+          "input": "Count"
+        }
+      },
+      {
+        "from": {
+          "id": 12,
+          "output": "Geometry"
+        },
+        "to": {
+          "id": 15,
+          "input": "Geometry"
+        }
+      },
+      {
+        "from": {
+          "id": 9,
+          "output": "Unit vector"
+        },
+        "to": {
+          "id": 12,
+          "input": "Motion"
+        }
+      },
+      {
+        "from": {
+          "id": 9,
+          "output": "Unit vector"
+        },
+        "to": {
+          "id": 13,
+          "input": "List"
+        }
+      },
+      {
+        "from": {
+          "id": 6,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 8,
+          "input": "Start"
+        }
+      },
+      {
+        "from": {
+          "id": 4,
+          "output": "Polygon"
+        },
+        "to": {
+          "id": 12,
+          "input": "Geometry"
+        }
+      },
+      {
+        "from": {
+          "id": 15,
+          "output": "Geometry"
+        },
+        "to": {
+          "id": 16,
+          "input": "Curves"
+        }
+      },
+      {
+        "from": {
+          "id": 13,
+          "output": "Length"
+        },
+        "to": {
+          "id": 14,
+          "input": "Count"
+        }
+      },
+      {
+        "from": {
+          "id": 14,
+          "output": "Series"
+        },
+        "to": {
+          "id": 15,
+          "input": "Angle"
+        }
+      },
+      {
+        "from": {
+          "id": 10,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 14,
+          "input": "Start"
+        }
+      },
+      {
+        "from": {
+          "id": 11,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 14,
+          "input": "Step"
+        }
+      },
+      {
+        "from": {
+          "id": 2,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 4,
+          "input": "Segments"
+        }
+      }
+    ]
+  }
+}

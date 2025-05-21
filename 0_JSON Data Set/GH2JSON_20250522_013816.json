@@ -1,0 +1,221 @@
+{
+  "Description": "What the script does: dgdfh\nScript inputs: fhsgfhgf\nScript outputs: gfhgsfhgfs",
+  "output": {
+    "components": [
+      {
+        "id": 1,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 500
+        }
+      },
+      {
+        "id": 2,
+        "type": "Rectangle",
+        "objectType": "Component",
+        "guid": "d93100b6-d50b-40b2-831a-814659dc38e3",
+        "params": {}
+      },
+      {
+        "id": 3,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 10
+        }
+      },
+      {
+        "id": 4,
+        "type": "Populate 2D",
+        "objectType": "Component",
+        "guid": "e2d958e8-9f08-44f7-bf47-a684882d0b2a",
+        "params": {}
+      },
+      {
+        "id": 5,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 647
+        }
+      },
+      {
+        "id": 6,
+        "type": "Number Slider",
+        "objectType": "Parameter",
+        "guid": "57da07bd-ecab-415d-9d86-af36d7073abc",
+        "params": {
+          "Value": 10
+        }
+      },
+      {
+        "id": 7,
+        "type": "Circle",
+        "objectType": "Component",
+        "guid": "807b86e3-be8d-4970-92b5-f8cdcb45b06b",
+        "params": {}
+      },
+      {
+        "id": 8,
+        "type": "Construct Domain",
+        "objectType": "Component",
+        "guid": "d1a28e95-cf96-4936-bf34-8bf142d731bf",
+        "params": {}
+      },
+      {
+        "id": 9,
+        "type": "List Length",
+        "objectType": "Component",
+        "guid": "1817fd29-20ae-4503-b542-f0fb651e67d7",
+        "params": {}
+      },
+      {
+        "id": 10,
+        "type": "Random",
+        "objectType": "Component",
+        "guid": "2ab17f9a-d852-4405-80e1-938c5e57e78d",
+        "params": {}
+      },
+      {
+        "id": 11,
+        "type": "Unit Z",
+        "objectType": "Component",
+        "guid": "9103c240-a6a9-4223-9b42-dbd19bf38e2b",
+        "params": {}
+      },
+      {
+        "id": 12,
+        "type": "Extrude",
+        "objectType": "Component",
+        "guid": "962034e9-cc27-4394-afc4-5c16e3447cf9",
+        "params": {}
+      }
+    ],
+    "connections": [
+      {
+        "from": {
+          "id": 4,
+          "output": "Population"
+        },
+        "to": {
+          "id": 7,
+          "input": "Plane"
+        }
+      },
+      {
+        "from": {
+          "id": 2,
+          "output": "Rectangle"
+        },
+        "to": {
+          "id": 4,
+          "input": "Region"
+        }
+      },
+      {
+        "from": {
+          "id": 1,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 2,
+          "input": "Y Size"
+        }
+      },
+      {
+        "from": {
+          "id": 7,
+          "output": "Circle"
+        },
+        "to": {
+          "id": 12,
+          "input": "Base"
+        }
+      },
+      {
+        "from": {
+          "id": 7,
+          "output": "Circle"
+        },
+        "to": {
+          "id": 9,
+          "input": "List"
+        }
+      },
+      {
+        "from": {
+          "id": 3,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 7,
+          "input": "Radius"
+        }
+      },
+      {
+        "from": {
+          "id": 11,
+          "output": "Unit vector"
+        },
+        "to": {
+          "id": 12,
+          "input": "Direction"
+        }
+      },
+      {
+        "from": {
+          "id": 10,
+          "output": "Random"
+        },
+        "to": {
+          "id": 11,
+          "input": "Factor"
+        }
+      },
+      {
+        "from": {
+          "id": 8,
+          "output": "Domain"
+        },
+        "to": {
+          "id": 10,
+          "input": "Range"
+        }
+      },
+      {
+        "from": {
+          "id": 6,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 8,
+          "input": "Domain start"
+        }
+      },
+      {
+        "from": {
+          "id": 5,
+          "output": "Number Slider"
+        },
+        "to": {
+          "id": 8,
+          "input": "Domain end"
+        }
+      },
+      {
+        "from": {
+          "id": 9,
+          "output": "Length"
+        },
+        "to": {
+          "id": 10,
+          "input": "Number"
+        }
+      }
+    ]
+  }
+}
